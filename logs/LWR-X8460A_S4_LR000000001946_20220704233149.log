@@ -1,0 +1,464 @@
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.75: Destination host unreachable.
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.100: bytes=32 time<1ms TTL=64
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.100: bytes=32 time<1ms TTL=64
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+Pinging 192.168.100.100 with 32 bytes of data:
+Reply from 192.168.100.100: bytes=32 time<1ms TTL=64
+
+Ping statistics for 192.168.100.100:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+wifi down
+OK
+OK
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+device: wifi2 vifs: cfg063579
+uci set network.wlan5=interface
+uci set network.wlan5.type=bridge
+uci set network.wlan5.proto=static
+uci set network.wlan5.ipaddr=192.168.90.100
+uci set network.wlan5.netmask=255.255.255.0
+uci set network.wlan5.force_link=1
+uci set network.wlan2=interface
+uci set network.wlan2.type=bridge
+uci set network.wlan2.proto=static
+uci set network.wlan2.ipaddr=192.168.80.100
+uci set network.wlan2.netmask=255.255.255.0
+uci set network.wlan2.force_link=1
+uci set network.wlan6=interface
+uci set network.wlan6.type=bridge
+uci set network.wlan6.proto=static
+uci set network.wlan6.ipaddr=192.168.70.100
+uci set network.wlan6.netmask=255.255.255.0
+uci set network.wlan6.force_link=1
+uci set wireless.@wifi-iface[0].network=wlan5
+uci set wireless.@wifi-iface[1].network=wlan2
+uci set wireless.@wifi-iface[2].network=wlan6
+wifi
+OK
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+device: wifi2 vifs: cfg063579
+Enable ol_stats by default for Lithium platforms
+Enable ol_stats by default for Lithium platforms
+OK
+Enable ol_stats by default for Lithium platforms
+Enable ol_stats by default for Lithium platforms
+OK
+Enable ol_stats by default for Lithium platforms
+Enable ol_stats by default for Lithium platforms
+OK
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+device: wifi2 vifs: cfg063579
+__get_sta_count
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+0  
+iwpriv ath0 get_sta_count | awk -F":" '{print $2}'
+1  
+__check_dp
+ping 192.168.90.90 -c 1
+PING 192.168.90.90 (192.168.90.90): 56 data bytes
+64 bytes from 192.168.90.90: seq=0 ttl=64 time=6.673 ms
+
+--- 192.168.90.90 ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 6.673/6.673/6.673 ms
+__do_tput
+ssh -y root@192.168.90.90 "killall iperf"
+ssh -y -f root@192.168.90.90 "iperf -u -s > /tmp/iperf_s &"
+iperf -u -c 192.168.90.90 -b 1000M -t 5 -i 1 -P5
+ssh -y root@192.168.90.90 "cat /tmp/iperf_s"
+------------------------------------------------------------
+Server listening on UDP port 5001
+Receiving 1470 byte datagrams
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.90.90 port 5001 connected with 192.168.90.100 port 43662
+[  4] local 192.168.90.90 port 5001 connected with 192.168.90.100 port 33234
+[  5] local 192.168.90.90 port 5001 connected with 192.168.90.100 port 56980
+[  6] local 192.168.90.90 port 5001 connected with 192.168.90.100 port 56344
+[  8] local 192.168.90.90 port 5001 connected with 192.168.90.100 port 45152
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  3]  0.0- 5.0 sec  58.6 MBytes  98.3 Mbits/sec   0.612 ms    0/41815 (0%)
+[  3]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  4]  0.0- 5.0 sec  59.4 MBytes  99.6 Mbits/sec   0.756 ms    5/42374 (0.012%)
+[  4]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  5]  0.0- 5.0 sec  58.5 MBytes  98.1 Mbits/sec   0.673 ms    0/41740 (0%)
+[  5]  0.0- 5.0 sec  3 datagrams received out-of-order
+[  6]  0.0- 5.0 sec  58.7 MBytes  98.4 Mbits/sec   0.807 ms    2/41850 (0.0048%)
+[  6]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  8]  0.0- 5.0 sec  59.3 MBytes  99.4 Mbits/sec   0.626 ms    1/42301 (0.0024%)
+[  8]  0.0- 5.0 sec  1 datagrams received out-of-order
+[SUM]  0.0- 5.0 sec   295 MBytes   494 Mbits/sec
+ssh -y root@192.168.90.90 "cat /tmp/iperf_s" > /tmp/iperf_s
+ssh -y root@192.168.90.90 "echo -e " " > /tmp/iperf_s"
+ssh -y root@192.168.90.90 "killall iperf"
+__get_rssi
+lanner-prod wifi rssi_detect -i wifi0 -t 1
+start to detect 1 times ...
+result:
+J16 max rssi=-19, min rssi=-19
+J17 max rssi=-18, min rssi=-18
+J18 max rssi=-21, min rssi=-21
+J19 max rssi=-17, min rssi=-17
+__get_debug_log
+cat /tmp/wifi_rssi.txt
+# rssi data
+rssi_comb = 84
+rssi_in_dbm = -12
+rx_per_chain_rssi_in_dbm[4] =  0:-19, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[5] =  0:-18, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[6] =  0:-21, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[7] =  0:-17, 1:0, 2:0, 3:0, 
+__get_rxRate
+wlanconfig ath0 list | sed -n 2p | awk '{print $5}'
+573M
+__get_sta_count
+iwpriv ath2 get_sta_count | awk -F":" '{print $2}'
+1  
+__check_dp
+ping 192.168.70.90 -c 1
+PING 192.168.70.90 (192.168.70.90): 56 data bytes
+64 bytes from 192.168.70.90: seq=0 ttl=64 time=9.597 ms
+
+--- 192.168.70.90 ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 9.597/9.597/9.597 ms
+__do_tput
+ssh -y root@192.168.70.90 "killall iperf"
+ssh -y -f root@192.168.70.90 "iperf -u -s > /tmp/iperf_s &"
+iperf -u -c 192.168.70.90 -b 1000M -t 5 -i 1 -P5
+ssh -y root@192.168.70.90 "cat /tmp/iperf_s"
+------------------------------------------------------------
+Server listening on UDP port 5001
+Receiving 1470 byte datagrams
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.70.90 port 5001 connected with 192.168.70.100 port 44767
+[  4] local 192.168.70.90 port 5001 connected with 192.168.70.100 port 39444
+[  5] local 192.168.70.90 port 5001 connected with 192.168.70.100 port 56577
+[  6] local 192.168.70.90 port 5001 connected with 192.168.70.100 port 37180
+[  8] local 192.168.70.90 port 5001 connected with 192.168.70.100 port 60659
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  4]  0.0- 5.0 sec  55.6 MBytes  93.2 Mbits/sec   0.382 ms    1/39675 (0.0025%)
+[  4]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  6]  0.0- 5.0 sec  55.2 MBytes  92.5 Mbits/sec   0.474 ms    6/39377 (0.015%)
+[  6]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  8]  0.0- 5.0 sec  55.7 MBytes  93.3 Mbits/sec   0.558 ms    1/39726 (0.0025%)
+[  8]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  3]  0.0- 5.0 sec  56.0 MBytes  93.7 Mbits/sec   1.079 ms    0/39932 (0%)
+[  3]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  5]  0.0- 5.0 sec  55.6 MBytes  93.1 Mbits/sec   0.945 ms    0/39653 (0%)
+[  5]  0.0- 5.0 sec  1 datagrams received out-of-order
+[SUM]  0.0- 5.0 sec   278 MBytes   466 Mbits/sec
+ssh -y root@192.168.70.90 "cat /tmp/iperf_s" > /tmp/iperf_s
+ssh -y root@192.168.70.90 "echo -e " " > /tmp/iperf_s"
+ssh -y root@192.168.70.90 "killall iperf"
+__get_rssi
+lanner-prod wifi rssi_detect -i wifi2 -t 1
+start to detect 1 times ...
+result:
+J24 max rssi=-30, min rssi=-30
+J25 max rssi=-21, min rssi=-21
+J26 max rssi=-28, min rssi=-28
+J27 max rssi=-27, min rssi=-27
+__get_debug_log
+cat /tmp/wifi_rssi.txt
+# rssi data
+rssi_comb = 75
+rssi_in_dbm = -19
+rx_per_chain_rssi_in_dbm[0] =  0:-30, 1:-54, 2:-49, 3:-59, 
+rx_per_chain_rssi_in_dbm[1] =  0:-21, 1:-46, 2:-44, 3:-50, 
+rx_per_chain_rssi_in_dbm[2] =  0:-28, 1:-55, 2:-51, 3:-61, 
+rx_per_chain_rssi_in_dbm[3] =  0:-27, 1:-49, 2:-45, 3:-54, 
+__get_rxRate
+wlanconfig ath2 list | sed -n 2p | awk '{print $5}'
+688M
+__get_sta_count
+iwpriv ath1 get_sta_count | awk -F":" '{print $2}'
+1  
+__check_dp
+ping 192.168.80.90 -c 1
+PING 192.168.80.90 (192.168.80.90): 56 data bytes
+64 bytes from 192.168.80.90: seq=0 ttl=64 time=11.578 ms
+
+--- 192.168.80.90 ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 11.578/11.578/11.578 ms
+__do_tput
+ssh -y root@192.168.80.90 "killall iperf"
+ssh -y -f root@192.168.80.90 "iperf -u -s > /tmp/iperf_s &"
+iperf -u -c 192.168.80.90 -b 1000M -t 5 -i 1 -P5
+ssh -y root@192.168.80.90 "cat /tmp/iperf_s"
+------------------------------------------------------------
+Server listening on UDP port 5001
+Receiving 1470 byte datagrams
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.80.90 port 5001 connected with 192.168.80.100 port 57318
+[  4] local 192.168.80.90 port 5001 connected with 192.168.80.100 port 55986
+[  5] local 192.168.80.90 port 5001 connected with 192.168.80.100 port 46136
+[  6] local 192.168.80.90 port 5001 connected with 192.168.80.100 port 33455
+[  8] local 192.168.80.90 port 5001 connected with 192.168.80.100 port 49926
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  4]  0.0- 5.0 sec  55.1 MBytes  92.4 Mbits/sec   0.471 ms    1/39296 (0.0025%)
+[  4]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  6]  0.0- 5.0 sec  55.7 MBytes  93.4 Mbits/sec   0.805 ms    3/39766 (0.0075%)
+[  6]  0.0- 5.0 sec  3 datagrams received out-of-order
+[  8]  0.0- 5.0 sec  54.9 MBytes  92.1 Mbits/sec   0.686 ms    8/39190 (0.02%)
+[  8]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  3]  0.0- 5.0 sec  55.2 MBytes  92.3 Mbits/sec   1.142 ms    0/39346 (0%)
+[  3]  0.0- 5.0 sec  1 datagrams received out-of-order
+[  5]  0.0- 5.0 sec  55.5 MBytes  92.9 Mbits/sec   0.891 ms    0/39593 (0%)
+[  5]  0.0- 5.0 sec  1 datagrams received out-of-order
+[SUM]  0.0- 5.0 sec   276 MBytes   463 Mbits/sec
+ssh -y root@192.168.80.90 "cat /tmp/iperf_s" > /tmp/iperf_s
+ssh -y root@192.168.80.90 "echo -e " " > /tmp/iperf_s"
+ssh -y root@192.168.80.90 "killall iperf"
+__get_rssi
+lanner-prod wifi rssi_detect -i wifi1 -t 1
+start to detect 1 times ...
+result:
+J20 max rssi=0, min rssi=0
+J21 max rssi=-16, min rssi=-16
+J22 max rssi=-19, min rssi=-19
+J23 max rssi=-15, min rssi=-15
+__get_debug_log
+cat /tmp/wifi_rssi.txt
+# rssi data
+rssi_comb = 86
+rssi_in_dbm = -10
+rx_per_chain_rssi_in_dbm[0] =  0:0, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[1] =  0:-16, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[2] =  0:-19, 1:0, 2:0, 3:0, 
+rx_per_chain_rssi_in_dbm[3] =  0:-15, 1:0, 2:0, 3:0, 
+__get_rxRate
+wlanconfig ath1 list | sed -n 2p | awk '{print $5}'
+573M
+__get_tput
+cat /tmp/iperf_s | grep SUM
+[SUM]  0.0- 5.0 sec   276 MBytes   463 Mbits/sec
+wifi down
+OK
+OK
+OK
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+device: wifi2 vifs: cfg063579
+__do_reboot
+reboot
+Total Test Time: 71s
