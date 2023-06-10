@@ -204,8 +204,8 @@ def do_parsing(file):
             line = f.readline()
         f.close()
     
-    if this.sumNum >= 3:
-        print(file + ' ' + str(thisDbg.pingNum_5G) + ' ' + str(thisDbg.pingNum_6G) + ' ' + str(thisDbg.pingNum_24G) + ' ' + str(this.sumNum))
+    # if this.sumNum >= 3:
+    #     print(file + ' ' + str(thisDbg.pingNum_5G) + ' ' + str(thisDbg.pingNum_6G) + ' ' + str(thisDbg.pingNum_24G) + ' ' + str(this.sumNum))
     
     arr = np.array([this.sn, this.result, 
                     this.tput_5G,  this.rxRate_5G,  this.rssi_5G[0],  this.rssi_5G[1],  this.rssi_5G[2],  this.rssi_5G[3],

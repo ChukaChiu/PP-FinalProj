@@ -11,3 +11,4 @@ __pycache__/
 
 # generate files
 LWR-*_mp_data_*.xlsx
+logs_dup/
