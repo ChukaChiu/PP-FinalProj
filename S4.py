@@ -219,8 +219,8 @@ def do_parsing(file):
     del this
     return arr, arrDbg
     
-def create_report(reportEmpty, reportName, workSheet, headArray, dataArray, debugArray):
-    wb = load_workbook(filename = reportEmpty)
+def create_report(reportTemplate, reportName, workSheet, headArray, dataArray, debugArray):
+    wb = load_workbook(filename = reportTemplate)
     ws = wb[workSheet]
     x = 1
     y = 0
