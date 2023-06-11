@@ -15,11 +15,9 @@ LOG_DUPLICATE_DIR = './logs_dup'
 REPORT_TEMPLATE = "LWR-X8460_mp_data_empty.xlsx"
 PEPORT_PREFIX = "LWR-X8460_mp_data_"
 
-DUP_COUNT = int(50000)
+DUP_COUNT = int(20000)
 
 if __name__ == '__main__':
-    firstTime = True
-
     fileContents = []
     logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
     for fileName in glob.glob(os.path.join(LOG_DIR, logFileGlob)):

@@ -27,7 +27,6 @@ if __name__ == '__main__':
     logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
     for fileName in tqdm(glob.glob(os.path.join(LOG_DIR, logFileGlob))):
         if firstTime:
-            headArray = S4.get_info(fileName)
             dataArray = S4.dataHead
             debugArray = S4.debugHead
         arr, arrDbg = S4.do_parsing(fileName)
@@ -40,7 +39,7 @@ if __name__ == '__main__':
         reportWritable = True
         now = datetime.now()
         reportName = PEPORT_PREFIX + now.strftime("%Y") + now.strftime("%m") + now.strftime("%d") + ".xlsx"
-        S4.create_report(REPORT_TEMPLATE, reportName, STATION_NAME, headArray, dataArray, debugArray)
+        S4.create_report(REPORT_TEMPLATE, reportName, STATION_NAME, [], dataArray, debugArray)
     
     timeEnd = datetime.now()
     print('Time Spend: ' + str(timeEnd - timeStart))

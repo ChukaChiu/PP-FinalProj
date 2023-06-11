@@ -1,4 +1,6 @@
 import numpy as np
+from numpy.typing import NDArray
+from typing import Tuple
 from openpyxl import load_workbook
 
 DEBUG_WIFI_PING = True
@@ -107,7 +109,7 @@ def get_info(file):
     del this
     return np.vstack([infoHead, arr])
 
-def do_parsing(file):
+def do_parsing(file) -> Tuple[NDArray, NDArray]:
     pingTemp = 0
     getRX = False
     wifiRadio = ''
@@ -241,7 +243,7 @@ def create_report(reportTemplate, reportName, workSheet, headArray, dataArray, d
     y = 0
     for row in range(10, 10 + debugArray.shape[0] - 1, 1):
         for col in range(24, 24 + debugArray.shape[1], 1):
-            ws.cell(row = row, column = col, value = int(debugArray[x, y]))
+            ws.cell(row = row, column = col, value = debugArray[x, y])
             y += 1
         x += 1
         y = 0
