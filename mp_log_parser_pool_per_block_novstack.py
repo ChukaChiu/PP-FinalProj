@@ -58,14 +58,11 @@ def process_logs(pool_size: int):    #np.set_printoptions(linewidth=250)
         dataArray, debugArray = serial_log(fileNameList)
     else:
         with Pool(pool_size) as p:
-            row = len(fileNameList)
-            worker_row = len(fileNameList) // pool_size
-            dataArray = np.empty((row, len(S4.dataHead)), dtype=object)
-            debugArray = np.empty((row, len(S4.debugHead)), dtype=object)
+            dataArray = np.empty((0, len(S4.dataHead)), dtype=object)
+            debugArray = np.empty((0, len(S4.debugHead)), dtype=object)
             for i, (arr, arrDbg) in enumerate(tqdm(p.imap_unordered(serial_log, fileNameList2D))):
-                dataArray[i*worker_row:(i+1)*worker_row,:] = arr
-                debugArray[i*worker_row:(i+1)*worker_row,:] = arrDbg
-                pass
+                dataArray = np.vstack([dataArray, arr])
+                debugArray = np.vstack([debugArray, arrDbg])
     return dataArray, debugArray
 
 if __name__ == '__main__':
