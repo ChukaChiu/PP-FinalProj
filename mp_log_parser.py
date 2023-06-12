@@ -27,7 +27,7 @@ def args_parser():
     )
     return parser
 
-def main():
+def process_logs():
     firstTime = True
     logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
     for fileName in tqdm(glob.glob(os.path.join(LOG_DIR, logFileGlob))):
@@ -39,19 +39,20 @@ def main():
         debugArray = np.vstack([debugArray, arrDbg])
         firstTime = False
         
-    # check report template exists
-    if os.path.isfile(REPORT_TEMPLATE):
-        now = datetime.now()
-        reportName = PEPORT_PREFIX + now.strftime("%Y") + now.strftime("%m") + now.strftime("%d") + ".xlsx"
-        S4.create_report(REPORT_TEMPLATE, reportName, STATION_NAME, [], dataArray, debugArray)
+    return dataArray, debugArray 
     
 
 if __name__ == '__main__':
     args = args_parser().parse_args()
-    timeStart = datetime.now()
-    if args.profiling:
-        cProfile.run('main()', filename='pstats')
-    else:
-        main()
-    timeEnd = datetime.now()
-    print('Time Spend: ' + str(timeEnd - timeStart))
+    process_start = datetime.now()
+    dataArray, debugArray = process_logs()
+    process_end = datetime.now()
+    print('Process Time Spend: ' + str(process_end - process_start))
+
+    # check report template exists
+    if os.path.isfile(REPORT_TEMPLATE):
+        write_file_start = datetime.now()
+        reportName = PEPORT_PREFIX + write_file_start.strftime("%Y") + write_file_start.strftime("%m") + write_file_start.strftime("%d") + ".xlsx"
+        S4.create_report(REPORT_TEMPLATE, reportName, STATION_NAME, [], dataArray, debugArray)
+        write_file_end = datetime.now()
+        print('Write File Time Spend: ' + str(write_file_end - write_file_start))

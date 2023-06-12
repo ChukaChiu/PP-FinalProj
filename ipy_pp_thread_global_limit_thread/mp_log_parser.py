@@ -7,11 +7,14 @@ import glob
 from time import strftime
 import threading
 
-LOG_PATH = '.'
-LOG_TYPE = '.log'
-MODEL_NAME = 'LWR-X8460'
+from tqdm import tqdm
 
-REPORT_EMPTY = "LWR-X8460_mp_data_empty.xlsx"
+LOG_DIR = '../logs_dup'
+LOG_EXT = 'log'
+MODEL_NAME = 'LWR-X8460A'
+STATION_NAME = 'S4'
+
+REPORT_TEMPLATE = "LWR-X8460_mp_data_empty.xlsx"
 PEPORT_PREFIX = "LWR-X8460_mp_data_"
 
 ## S4 defne #########################################
@@ -134,7 +137,7 @@ def do_parsing(files):
     this = S4TestDetail()
     thisDbg = S4Debug()
     
-    for file in files:
+    for file in tqdm(files):
         with open(file, "r") as f:
             line = f.readline()
         
@@ -228,10 +231,7 @@ def do_parsing(files):
                     this.result = line.partition(':')[2].strip()
                 line = f.readline()
             f.close()
-    
-        if this.sumNum >= 3:
-            print(file + ' ' + str(thisDbg.pingNum_5G) + ' ' + str(thisDbg.pingNum_6G) + ' ' + str(thisDbg.pingNum_24G) + ' ' + str(this.sumNum))
-    
+
         arr = [this.sn, this.result, 
                     this.tput_5G,  this.rxRate_5G,  this.rssi_5G[0],  this.rssi_5G[1],  this.rssi_5G[2],  this.rssi_5G[3],
                     this.tput_6G,  this.rxRate_6G,  this.rssi_6G[0],  this.rssi_6G[1],  this.rssi_6G[2],  this.rssi_6G[3],
@@ -250,20 +250,20 @@ def do_parsing(files):
 ####################################################
 
 if __name__ == '__main__':
-    firstTime = True
-    #fileList = os.listdir(LOG_PATH)
-    fileList = glob.glob("*.log")
     parser = argparse.ArgumentParser()
-    parser.add_argument('--station', '-s', choices = ['s2', 'S2', 's4', 'S4'])
+    parser.add_argument('--thread', '-t', required=True, type=int)
     args = parser.parse_args()
+
+    firstTime = True
+    logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
+    fileNameList = glob.glob(os.path.join(LOG_DIR, logFileGlob))
     timeStart = datetime.now()
 
-    numThread = 4
+    numThread = args.thread
     threads = []
-    print(len(fileList))
     
-    remainder = int(len(fileList)%numThread)
-    loaing = int(len(fileList)/numThread)
+    remainder = int(len(fileNameList)%numThread)
+    loaing = int(len(fileNameList)/numThread)
     if (remainder != 0):
         workerLoaing = loaing + 1
     else:
@@ -273,9 +273,9 @@ if __name__ == '__main__':
         endIdx = int(i * workerLoaing + workerLoaing);
         
         if (i != numThread - 1):
-            workerFileList = fileList[startIdx:endIdx]
+            workerFileList = fileNameList[startIdx:endIdx]
         else:
-            workerFileList = fileList[startIdx:]
+            workerFileList = fileNameList[startIdx:]
 
         thread = threading.Thread(target=do_parsing, args=(workerFileList,))
         thread.start()

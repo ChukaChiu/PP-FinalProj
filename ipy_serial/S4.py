@@ -1,7 +1,7 @@
 #import numpy as np
 import sys
 #sys.path.append(r"C:\Users\chuka_chiu\Anaconda3\envs\upgrade_parser\Lib\site-packages")
-from openpyxl import load_workbook
+# from openpyxl import load_workbook
 
 DEBUG_WIFI_PING = True
 DEBUG_TPUT_RETRY = True
@@ -210,8 +210,8 @@ def do_parsing(file):
             line = f.readline()
         f.close()
     
-    if this.sumNum >= 3:
-        print(file + ' ' + str(thisDbg.pingNum_5G) + ' ' + str(thisDbg.pingNum_6G) + ' ' + str(thisDbg.pingNum_24G) + ' ' + str(this.sumNum))
+    # if this.sumNum >= 3:
+    #     print(file + ' ' + str(thisDbg.pingNum_5G) + ' ' + str(thisDbg.pingNum_6G) + ' ' + str(thisDbg.pingNum_24G) + ' ' + str(this.sumNum))
     
     arr = [this.sn, this.result, 
                     this.tput_5G,  this.rxRate_5G,  this.rssi_5G[0],  this.rssi_5G[1],  this.rssi_5G[2],  this.rssi_5G[3],
@@ -226,7 +226,7 @@ def do_parsing(file):
     return arr, arrDbg
     
 def create_report(reportEmpty, reportName, workSheet, headArray, dataArray, debugArray):
-    wb = load_workbook(filename = reportEmpty)
+    # wb = load_workbook(filename = reportEmpty)
     #wb = load_workbook(filename = r"D:\98. personal\111-2\平行程式設計\final proj\parser\LWR-X8460_mp_data_empty.xlsx", data_only=True, read_only=True)
     ws = wb[workSheet]
     x = 1

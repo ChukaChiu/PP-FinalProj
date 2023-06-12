@@ -9,7 +9,7 @@ import threading
 
 import S4
 
-LOG_PATH = '.'
+LOG_PATH = '../log_dups'
 LOG_TYPE = '.log'
 MODEL_NAME = 'LWR-X8460'
 

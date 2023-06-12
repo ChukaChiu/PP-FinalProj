@@ -7,7 +7,7 @@ import sys
 from time import strftime
 import threading
 
-LOG_PATH = '.'
+LOG_PATH = '../log_dups'
 LOG_TYPE = '.log'
 MODEL_NAME = 'LWR-X8460'
 
