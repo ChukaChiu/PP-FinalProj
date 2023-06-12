@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-import cProfile
 import argparse
 from datetime import datetime
 import numpy as np
 import os
 import glob
-from typing import Tuple, List
 
 from tqdm import tqdm
 
@@ -22,10 +20,10 @@ STATION_NAME = 'S4'
 REPORT_TEMPLATE = "LWR-X8460_mp_data_empty.xlsx"
 PEPORT_PREFIX = "LWR-X8460_mp_data_"
 
-def split_task(filenames: List[str], section: int) -> List[List[str]]:
+def split_task(filenames, section):
     total = len(filenames)
     section_size = total//section
-    twoDims: List[List[str]] = []
+    twoDims = []
     r = total % section
     for i in range(0, section):
         add = 0
@@ -44,9 +42,9 @@ def args_parser():
     )
     return parser
 
-def serial_log(fileNames: List[str]):
-    dataArray = np.empty((0, len(S4.dataHead)))
-    debugArray = np.empty((0, len(S4.debugHead)))
+def serial_log(fileNames):
+    dataArray = np.empty((0, len(S4.dataHead)), dtype=object)
+    debugArray = np.empty((0, len(S4.debugHead)), dtype=object)
     for fileName in tqdm(fileNames):
         arr, arrDbg = S4.do_parsing(fileName)
         dataArray = np.vstack([dataArray, arr])
@@ -59,8 +57,8 @@ def process_logs(pool_size: int):    #np.set_printoptions(linewidth=250)
     fileNameList2D = split_task(fileNameList, pool_size)
 
     with Pool(pool_size) as p:
-        dataArray = np.empty((0, len(S4.dataHead)))
-        debugArray = np.empty((0, len(S4.debugHead)))
+        dataArray = np.empty((0, len(S4.dataHead)), dtype=object)
+        debugArray = np.empty((0, len(S4.debugHead)), dtype=object)
         for arr, arrDbg in tqdm(p.imap_unordered(serial_log, fileNameList2D)):
             dataArray = np.vstack([dataArray, arr])
             debugArray = np.vstack([debugArray, arrDbg])

@@ -1,6 +1,4 @@
 import numpy as np
-from numpy.typing import NDArray
-from typing import Tuple
 from openpyxl import load_workbook
 
 DEBUG_WIFI_PING = True
@@ -109,7 +107,7 @@ def get_info(file):
     del this
     return np.vstack([infoHead, arr])
 
-def do_parsing(file) -> Tuple[NDArray, NDArray]:
+def do_parsing(file):
     pingTemp = 0
     getRX = False
     wifiRadio = ''
