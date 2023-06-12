@@ -6,9 +6,11 @@ from datetime import datetime
 import numpy as np
 import os
 import glob
-from time import strftime
+from typing import Tuple, List
 
 from tqdm import tqdm
+
+from multiprocessing import Pool
 
 import S4
 
@@ -23,35 +25,45 @@ PEPORT_PREFIX = "LWR-X8460_mp_data_"
 def args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--profiling', type=bool, default=False
+        '-p', '--pool', type=int, required=True
+    )
+    parser.add_argument(
+        '--profiling', type=bool, required=False, default=False
     )
     return parser
 
-def main():
-    firstTime = True
-    logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
-    for fileName in tqdm(glob.glob(os.path.join(LOG_DIR, logFileGlob))):
-        if firstTime:
-            dataArray = S4.dataHead
-            debugArray = S4.debugHead
+def serial_log(fileNames: List[str]):
+    dataArray = np.empty((0, len(S4.dataHead)))
+    debugArray = np.empty((0, len(S4.debugHead)))
+    for fileName in tqdm(fileNames):
         arr, arrDbg = S4.do_parsing(fileName)
         dataArray = np.vstack([dataArray, arr])
         debugArray = np.vstack([debugArray, arrDbg])
-        firstTime = False
-        
+    return dataArray, debugArray
+
+def main(pool_size: int):    #np.set_printoptions(linewidth=250)
+    logFileGlob = '{}_{}_*.{}'.format(MODEL_NAME, STATION_NAME, LOG_EXT)
+    fileNameList = glob.glob(os.path.join(LOG_DIR, logFileGlob))
+
+    with Pool(pool_size) as p:
+        dataArray = np.empty((0, len(S4.dataHead)))
+        debugArray = np.empty((0, len(S4.debugHead)))
+        for arr, arrDbg in tqdm(p.imap_unordered(S4.do_parsing, fileNameList)):
+            dataArray = np.vstack([dataArray, arr])
+            debugArray = np.vstack([debugArray, arrDbg])
+
     # check report template exists
     if os.path.isfile(REPORT_TEMPLATE):
         now = datetime.now()
         reportName = PEPORT_PREFIX + now.strftime("%Y") + now.strftime("%m") + now.strftime("%d") + ".xlsx"
         S4.create_report(REPORT_TEMPLATE, reportName, STATION_NAME, [], dataArray, debugArray)
-    
 
 if __name__ == '__main__':
     args = args_parser().parse_args()
     timeStart = datetime.now()
-    if args.profiling:
-        cProfile.run('main()', filename='pstats')
+    if args.profile: 
+        cProfile.run('main(pool_size={})'.format(args.pool), filename='pstats')
     else:
-        main()
+        main(pool_size=args.pool)
     timeEnd = datetime.now()
     print('Time Spend: ' + str(timeEnd - timeStart))

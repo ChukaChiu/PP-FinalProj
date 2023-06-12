@@ -1,0 +1,12 @@
+# virtualenv related
+.venv/
+
+# python cache
+__pycache__/
+
+# MAC OS files
+.DS_Store
+
+# generate files
+LWR-*_mp_data_*.xlsx
+logs_dup/
